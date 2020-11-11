@@ -297,7 +297,7 @@ Note: Format namenode using command:-
           print("TRY AGAIN ")
 
     elif(check_input == 5):
-      http_input = input("Setup Httpd WebServer: ")
+      http_input = input("Setup Httpd WebServer(Local/Remote): ")
       if http_input == "local":
         print("Installing Httpd Software")
         os.system("yum install httpd -y")
