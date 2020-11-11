@@ -434,6 +434,10 @@ Note: Format namenode using command:-
       if ansible_input == "local":
         print("Installing ansible and configuring ansible files")
         os.system("yum install python36 -y")
+        os.system("yum install python3 -y")
+        os.system("python3 get-pip.py --user")
+        os.system("export PATH=~/.local/bin:$PATH")
+        os.system("source ~/.bash_profile")
         os.system("pip3 install ansible")
         os.system("dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm")
         os.system("yum install sshpass -y")
